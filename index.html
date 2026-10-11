@@ -5,19 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>S.R.R. Pavimentação Asfáltica | Recapeamento asfáltico · (14) 99721-7335</title>
 <meta name="description" content="S.R.R. Prestação de Serviços: recapeamento e pavimentação asfáltica para ruas, condomínios, pátios e empresas no interior de São Paulo. Orçamento pelo WhatsApp com o Rafael: (14) 99721-7335.">
-<meta name="theme-color" content="#0c0c0b">
+<meta name="theme-color" content="#0e0f11">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="S.R.R. Prestação de Serviços">
 <meta property="og:title" content="S.R.R. · Recapeamento e pavimentação asfáltica">
-<meta property="og:description" content="Asfalto novo onde hoje tem buraco. Orçamento pelo WhatsApp com o Rafael: (14) 99721-7335.">
-<meta property="og:image" content="assets/og.jpg">
+<meta property="og:description" content="Asfalto novo, sem buraco e sem remendo. Orçamento pelo WhatsApp com o Rafael: (14) 99721-7335.">
+<meta property="og:url" content="https://srr-pavimentacao.vercel.app/">
+<meta property="og:image" content="https://srr-pavimentacao.vercel.app/assets/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://srr-pavimentacao.vercel.app/">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<link rel="preload" href="fonts/archivo-latin-wdth-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/img/asphalt-old.webp" as="image">
-<link rel="preload" href="assets/img/asphalt-new.webp" as="image">
+<link rel="preload" href="fonts/kanit-latin-800-italic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/barlow-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/img/caminhao-srr.webp" as="image" fetchpriority="high">
 <link rel="stylesheet" href="css/style.css">
 <script>document.documentElement.classList.add("js")</script>
 <script type="application/ld+json">
@@ -28,8 +30,9 @@
   "alternateName": "S.R.R. Pavimentação Asfáltica",
   "description": "Recapeamento e pavimentação asfáltica.",
   "slogan": "Qualidade, confiança, compromisso",
-  "image": "assets/img/logo-srr-640.jpg",
-  "logo": "assets/img/logo-srr-640.jpg",
+  "url": "https://srr-pavimentacao.vercel.app/",
+  "image": "https://srr-pavimentacao.vercel.app/assets/img/logo-srr-640.jpg",
+  "logo": "https://srr-pavimentacao.vercel.app/assets/img/logo-srr-640.jpg",
   "telephone": "+5514997217335",
   "contactPoint": [
     { "@type": "ContactPoint", "telephone": "+5514997217335", "contactType": "sales", "name": "Rafael", "availableLanguage": "Portuguese" },
@@ -43,347 +46,299 @@
 <body>
 <a class="skip" href="#orcamento">Ir para o orçamento</a>
 
+<!-- ============ BARRA ============ -->
 <header class="bar" id="bar">
-  <a class="brand" href="#topo" aria-label="S.R.R. Prestação de Serviços, início">
-    <span class="mark" aria-hidden="true">S<i></i>R<i></i>R<i></i></span>
-    <span class="brand__sub">Pavimentação<br>asfáltica</span>
-  </a>
-  <nav class="nav" aria-label="Seções">
-    <a href="#servico">Serviço</a>
-    <a href="#processo">Como fazemos</a>
-    <a href="#contato">Contato</a>
-  </nav>
-  <a class="btn btn--sm" href="#orcamento">Orçamento</a>
+  <div class="bar__in">
+    <a class="brand" href="#inicio" aria-label="S.R.R. Prestação de Serviços, início">
+      <span class="mark" aria-hidden="true">S<i></i>R<i></i>R<i></i></span>
+      <span class="brand__sub">Pavimentação<br>asfáltica</span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Seções">
+      <a href="#servicos">Serviços</a>
+      <a href="#antes-depois">Antes e depois</a>
+      <a href="#obras">Obras</a>
+      <a href="#como-fazemos">Como fazemos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <a class="bar__tel" href="tel:+5514997217335"><small>Fale com o Rafael</small>(14) 99721-7335</a>
+    <a class="btn btn--wa bar__wa" data-wa="Olá, Rafael! Vim pelo site e quero um orçamento de asfalto." href="https://wa.me/5514997217335" target="_blank" rel="noopener">
+      <svg aria-hidden="true"><use href="#i-wa"/></svg><span>WhatsApp</span></a>
+    <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav"><span></span><span></span></button>
+  </div>
 </header>
 
 <main>
-<!-- 1 · TOPO: o asfalto novo cobre o velho conforme a página desce -->
-<section class="hero" id="topo" aria-labelledby="hero-title">
-  <div class="hero__stage">
-    <div class="road" aria-hidden="true">
-      <div class="road__old">
-        <svg class="road__marks" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
-          <defs>
-            <radialGradient id="pit" cx="50%" cy="45%" r="55%">
-              <stop offset="0" stop-color="#1b1a18"/>
-              <stop offset=".72" stop-color="#2c2a27"/>
-              <stop offset="1" stop-color="#2c2a27" stop-opacity="0"/>
-            </radialGradient>
-          </defs>
-          <!-- remendos antigos -->
-          <path class="patch" d="M1090 300h190l6 112-200 6z"/>
-          <path class="patch" d="M330 790l150-8 10 120-164 6z"/>
-          <path class="patch" d="M760 560l120 4-4 90-120-6z"/>
-          <!-- faixa central gasta -->
-          <g class="worn-line">
-            <rect x="40" y="872" width="170" height="16"/><rect x="330" y="870" width="170" height="16"/>
-            <rect x="620" y="873" width="170" height="16"/><rect x="910" y="871" width="110" height="16"/>
-            <rect x="1200" y="872" width="170" height="16"/><rect x="1490" y="870" width="170" height="16"/>
-          </g>
-          <!-- buracos -->
-          <g class="pothole"><ellipse cx="1010" cy="740" rx="92" ry="54" fill="url(#pit)"/><path d="M930 728c18-34 120-44 160-8" class="pit-rim"/></g>
-          <g class="pothole"><ellipse cx="520" cy="470" rx="58" ry="36" fill="url(#pit)"/><path d="M470 462c14-22 80-28 104-4" class="pit-rim"/></g>
-          <g class="pothole"><ellipse cx="1380" cy="880" rx="70" ry="40" fill="url(#pit)"/></g>
-          <!-- trincas -->
-          <g class="cracks">
-            <path d="M0 560l60 6 40-18 70 22 60-10 50 30 90-8 40 24 80-4"/>
-            <path d="M600 210l30 60-12 40 40 50-20 50 34 70-6 60 30 40"/>
-            <path d="M1200 120l-20 70 30 40-10 60 40 30-30 80 20 50"/>
-            <path d="M1100 600l70 20 40-12 60 30 90-6 60 26 100-14"/>
-            <path d="M700 820l50-30 70 10 40-40 90 20 40-30"/>
-            <path d="M150 300l40 40 70-10 30 50 80 10"/>
-            <path d="M1300 700l30 40 50 0 20 50 60 10" class="thin"/>
-            <path d="M1240 610l14 48 40 30-6 44" class="thin"/>
-            <path d="M960 120l40 46-10 52 30 40" class="thin"/>
-            <!-- couro de jacaré -->
-            <path d="M260 840l40-12 30 22 40-14 36 18M300 828l6 40 34 10M330 850l-4 46M370 836l10 44 40 4" class="thin"/>
-          </g>
-        </svg>
+<!-- ============ TOPO ============ -->
+<section class="hero" id="inicio" aria-labelledby="hero-title">
+  <div class="hero__bg" aria-hidden="true"></div>
+  <div class="hero__in">
+    <div class="hero__copy">
+      <p class="hero__tag"><span class="dot"></span>Atendimento em horário comercial · Interior de SP</p>
+      <h1 id="hero-title">
+        <span class="ln"><span>Asfalto novo,</span></span>
+        <span class="ln hl"><span>sem buraco</span></span>
+        <span class="ln hl"><span>e sem remendo.</span></span>
+      </h1>
+      <p class="hero__lede">Recapeamento e pavimentação asfáltica para ruas, condomínios, pátios e empresas. Orçamento direto com o Rafael, sem intermediário.</p>
+      <div class="quick" role="group" aria-label="Contato rápido">
+        <a class="quick__btn" href="tel:+5514997217335"><svg aria-hidden="true"><use href="#i-tel"/></svg>Ligar</a>
+        <a class="quick__btn quick__btn--wa" data-wa="Olá, Rafael! Vim pelo site e quero um orçamento de asfalto." href="https://wa.me/5514997217335" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
+        <a class="quick__btn" href="#orcamento"><svg aria-hidden="true"><use href="#i-doc"/></svg>Orçamento</a>
       </div>
-      <div class="road__new"></div>
-      <div class="screed"><span class="screed__tag"><b>Capa nova</b><b>Pavimento gasto</b></span></div>
-      <div class="road__shade"></div>
-      <svg class="lane-svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
-        <rect x="30" y="872" width="180" height="15"/><rect x="320" y="872" width="180" height="15"/>
-        <rect x="610" y="872" width="180" height="15"/><rect x="900" y="872" width="180" height="15"/>
-        <rect x="1190" y="872" width="180" height="15"/><rect x="1480" y="872" width="180" height="15"/>
-      </svg>
     </div>
 
-    <div class="hero__text">
-      <p class="kicker">S.R.R. Prestação de Serviços · Pavimentação asfáltica</p>
-      <h1 id="hero-title">Asfalto novo <br>onde hoje <br>tem buraco.</h1>
-      <p class="hero__lede">Recapeamento e pavimentação asfáltica para ruas, condomínios, pátios e empresas. Orçamento direto com o Rafael, pelo WhatsApp.</p>
-      <div class="hero__cta">
-        <a class="btn btn--wa" data-wa href="https://wa.me/5514997217335?text=Ol%C3%A1%2C%20Rafael!%20Vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento%20de%20asfalto." target="_blank" rel="noopener">
-          <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-wa"/></svg>Pedir orçamento no WhatsApp</a>
-        <a class="btn btn--ghost" href="#processo">Ver como é feito</a>
+    <div class="hero__art" aria-hidden="true">
+      <div class="slash"></div>
+      <div class="truck" id="truck">
+        <img src="assets/img/caminhao-srr.webp" srcset="assets/img/caminhao-srr-640.webp 579w, assets/img/caminhao-srr.webp 1158w" sizes="(min-width: 1000px) 46vw, 92vw" width="1158" height="940" alt="" fetchpriority="high" decoding="async">
+        <span class="beacon b1"></span><span class="beacon b2"></span>
+        <span class="lamp l1"></span><span class="lamp l2"></span>
+        <span class="shadow"></span>
       </div>
     </div>
-    <p class="hero__hint" aria-hidden="true">Role para recapear</p>
+  </div>
+
+  <!-- atalhos -->
+  <div class="acts" role="list">
+    <a class="act act--y" role="listitem" data-wa="Olá, Rafael! Quero um orçamento de asfalto." href="https://wa.me/5514997217335" target="_blank" rel="noopener">
+      <svg aria-hidden="true"><use href="#i-wa"/></svg><b>Pedir orçamento</b><span>Pelo WhatsApp, sem compromisso</span></a>
+    <a class="act" role="listitem" href="#servicos">
+      <svg aria-hidden="true"><use href="#i-layers"/></svg><b>Recapeamento</b><span>Para asfalto velho e remendado</span></a>
+    <a class="act" role="listitem" href="#servicos">
+      <svg aria-hidden="true"><use href="#i-road"/></svg><b>Pavimentação</b><span>Para onde ainda é terra</span></a>
+    <a class="act" role="listitem" href="tel:+5514997217335">
+      <svg aria-hidden="true"><use href="#i-tel"/></svg><b>Ligar agora</b><span>(14) 99721-7335</span></a>
   </div>
 </section>
 
-<!-- 2 · O SERVIÇO -->
-<section class="servico" id="servico" aria-labelledby="servico-title">
+<!-- ============ SERVIÇOS (carrossel) ============ -->
+<section class="sec sec--light" id="servicos" aria-labelledby="svc-title">
   <div class="wrap">
-    <header class="sec-head sec-head--split">
+    <div class="head">
       <div>
-        <p class="label">O serviço</p>
-        <h2 id="servico-title">A sua área já tem asfalto ou ainda&nbsp;não?</h2>
+        <p class="kicker">O que a S.R.R. faz</p>
+        <h2 class="title" id="svc-title">Onde a gente <span class="hl">passa asfalto</span></h2>
       </div>
-      <p>É a primeira pergunta do orçamento, e a resposta define o serviço. Os dois são feitos pela S.R.R.</p>
-    </header>
-
-    <ol class="offer">
-      <li class="offer__item">
-        <span class="offer__km" aria-hidden="true">01</span>
-        <h3>Recapeamento asfáltico</h3>
-        <p>Uma nova capa de asfalto aplicada sobre o pavimento que já existe. Cobre trincas, remendos e desgaste, devolve uma superfície lisa e firme e prolonga a vida da rua sem precisar arrancar tudo.</p>
-        <p class="offer__for">Para quando o asfalto está velho, remendado ou esburacado.</p>
-      </li>
-      <li class="offer__item">
-        <span class="offer__km" aria-hidden="true">02</span>
-        <h3>Pavimentação asfáltica</h3>
-        <p>Asfalto em áreas que ainda não têm pavimento: rua de terra, acesso, pátio, estacionamento. O resultado é uma área sem barro e sem poeira, que escoa a água e aguenta tráfego.</p>
-        <p class="offer__for">Para quando ainda é terra, cascalho ou piso solto.</p>
-      </li>
-    </ol>
-
-    <div class="where" aria-label="Onde aplicamos">
-      <p class="label">Onde aplicamos</p>
-      <p class="where__list"><span>Ruas e avenidas</span><span>Condomínios</span><span>Pátios e estacionamentos</span><span>Entradas e acessos de empresas</span><span>Loteamentos</span></p>
+      <div class="ctrl" aria-label="Navegar pelos serviços">
+        <button class="ctrl__b" data-prev="svc" aria-label="Anterior"><svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+        <button class="ctrl__b" data-next="svc" aria-label="Próximo"><svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      </div>
     </div>
   </div>
-</section>
 
-<!-- 3 · SINAIS -->
-<section class="sinais" aria-labelledby="sinais-title">
-  <div class="wrap">
-    <header class="sec-head sec-head--split">
-      <h2 id="sinais-title">Quatro sinais de que o pavimento pede uma capa&nbsp;nova.</h2>
-      <p>Tapar o buraco resolve por alguns meses. Quando aparecem estes sinais, o problema está na superfície inteira, e é aí que o recapeamento compensa.</p>
-    </header>
-    <ul class="signs">
-      <li>
-        <figure class="sample" aria-hidden="true">
-          <svg viewBox="0 0 200 200"><g class="s-crack"><path d="M10 60l30 10 20-14 30 18 26-8 30 20 44-6"/><path d="M20 120l34-8 22 18 30-12 24 16 34-10 30 8"/><path d="M40 70l6 50M76 56l-4 70M116 66l8 64M146 74l-6 54M172 70l4 58"/><path d="M54 112l-10 60M106 124l6 50M160 128l-8 44" /></g></svg>
-        </figure>
-        <h3>Trincas em rede</h3>
-        <p>As rachaduras se cruzam e formam “couro de jacaré”. A água entra por elas e enfraquece a base.</p>
-      </li>
-      <li>
-        <figure class="sample" aria-hidden="true">
-          <svg viewBox="0 0 200 200"><rect class="s-patch" x="34" y="40" width="92" height="74"/><ellipse class="s-hole" cx="124" cy="132" rx="46" ry="30"/><path class="s-rim" d="M82 126c10-22 70-28 88-4"/></svg>
-        </figure>
-        <h3>Buraco que volta</h3>
-        <p>Remendo em cima de remendo, e o buraco reaparece na chuva seguinte, às vezes do lado do anterior.</p>
-      </li>
-      <li>
-        <figure class="sample sample--loose" aria-hidden="true">
-          <svg viewBox="0 0 200 200"><g class="s-grit"><circle cx="40" cy="60" r="5"/><circle cx="62" cy="48" r="3"/><circle cx="90" cy="70" r="4"/><circle cx="120" cy="52" r="6"/><circle cx="150" cy="80" r="4"/><circle cx="48" cy="120" r="4"/><circle cx="80" cy="140" r="6"/><circle cx="112" cy="118" r="3"/><circle cx="140" cy="150" r="5"/><circle cx="168" cy="126" r="3"/><circle cx="70" cy="96" r="3"/><circle cx="160" cy="40" r="3"/></g></svg>
-        </figure>
-        <h3>Pedrinhas soltas</h3>
-        <p>O asfalto perde a liga, a superfície fica áspera e as pedras se soltam com a passagem dos carros.</p>
-      </li>
-      <li>
-        <figure class="sample" aria-hidden="true">
-          <svg viewBox="0 0 200 200"><path class="s-water" d="M30 120c10-30 60-40 100-30s50 30 30 46-80 20-110 8-24-14-20-24z"/><path class="s-shine" d="M60 108c20-10 50-12 70-4"/></svg>
-        </figure>
-        <h3>Água empoçada</h3>
-        <p>Afundamentos e ondulações seguram a água. Cada chuva acelera o desgaste no mesmo lugar.</p>
-      </li>
-    </ul>
-  </div>
-</section>
-
-<!-- 4 · PROCESSO: corte do pavimento montado camada por camada -->
-<section class="processo" id="processo" aria-labelledby="processo-title">
-  <div class="wrap processo__head">
-    <p class="label">Como fazemos</p>
-    <h2 id="processo-title">O recapeamento, camada por&nbsp;camada.</h2>
-  </div>
-
-  <div class="processo__track" id="track">
-    <div class="cut">
-      <div class="wrap cut__top">
-        <ol class="steps">
-          <li class="step" data-step="0">
-            <span class="step__n">01</span>
-            <h3>Avaliação e medição</h3>
-            <p>Antes do preço, a área é vista de perto: tamanho, estado do pavimento atual e por onde a água escoa. O orçamento sai em cima disso, não no chute.</p>
-          </li>
-          <li class="step" data-step="1">
-            <span class="step__n">02</span>
-            <h3>Limpeza e reparos</h3>
-            <p>A superfície é limpa e o material solto sai. Buracos e pontos afundados são corrigidos antes, para a capa nova assentar por igual.</p>
-          </li>
-          <li class="step" data-step="2">
-            <span class="step__n">03</span>
-            <h3>Pintura de ligação</h3>
-            <p>Uma película de emulsão asfáltica cobre o pavimento antigo. É ela que cola a camada nova na velha e evita que a capa descole.</p>
-          </li>
-          <li class="step" data-step="3">
-            <span class="step__n">04</span>
-            <h3>Aplicação da massa asfáltica</h3>
-            <p>A massa quente é espalhada em espessura uniforme, sem emendas visíveis, acompanhando o caimento para a água não parar.</p>
-          </li>
-          <li class="step" data-step="4">
-            <span class="step__n">05</span>
-            <h3>Compactação e acabamento</h3>
-            <p>O rolo compactador fecha a camada ainda quente. Depois de esfriar, a área está pronta para o tráfego.</p>
-          </li>
-        </ol>
-        <ol class="cut__dots" aria-hidden="true"><li></li><li></li><li></li><li></li><li></li></ol>
+  <div class="track" id="svc" tabindex="0" aria-label="Serviços, role para o lado">
+    <article class="card">
+      <div class="card__img m-ruas"><span class="mk"></span></div>
+      <div class="card__txt">
+        <h3>Recapeamento de ruas e avenidas</h3>
+        <p>Capa nova sobre o asfalto gasto. Some com trinca, buraco e remendo, e a rua fica lisa de novo.</p>
+        <a class="card__go" data-wa="Olá, Rafael! Quero orçamento de recapeamento de rua." href="https://wa.me/5514997217335" target="_blank" rel="noopener">Pedir orçamento <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
       </div>
-      <div class="cut__frame" aria-hidden="true">
-        <svg class="cut__svg" viewBox="0 80 1000 420" preserveAspectRatio="xMidYMax slice">
-          <defs>
-            <pattern id="p-new" width="160" height="160" patternUnits="userSpaceOnUse"><image href="assets/img/asphalt-new.webp" width="160" height="160"/></pattern>
-            <pattern id="p-old" width="140" height="140" patternUnits="userSpaceOnUse"><image href="assets/img/asphalt-old.webp" width="140" height="140"/></pattern>
-            <pattern id="p-base" width="24" height="24" patternUnits="userSpaceOnUse"><rect width="24" height="24" fill="#5b544b"/><circle cx="5" cy="6" r="3.2" fill="#857c70"/><circle cx="16" cy="4" r="2.2" fill="#6f675d"/><circle cx="13" cy="15" r="3.8" fill="#7b7367"/><circle cx="3" cy="19" r="2" fill="#8d8478"/><circle cx="21" cy="19" r="2.6" fill="#6a6258"/></pattern>
-            <pattern id="p-soil" width="30" height="30" patternUnits="userSpaceOnUse"><rect width="30" height="30" fill="#3e2f22"/><circle cx="6" cy="8" r="1.4" fill="#57432f"/><circle cx="20" cy="18" r="1.1" fill="#57432f"/><circle cx="12" cy="25" r="1.6" fill="#33271c"/><circle cx="26" cy="5" r="1" fill="#614a34"/></pattern>
-            <linearGradient id="g-steam" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#fff" stop-opacity=".22"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
-            <clipPath id="c-mat"><rect id="mat-clip" x="0" y="0" width="1000" height="560"/></clipPath>
-            <clipPath id="c-tack"><rect id="tack-clip" x="0" y="0" width="1000" height="560"/></clipPath>
-          </defs>
+    </article>
+    <article class="card">
+      <div class="card__img m-terra"><span class="mk"></span></div>
+      <div class="card__txt">
+        <h3>Pavimentação de rua de terra</h3>
+        <p>Asfalto onde hoje é chão batido ou cascalho. Acaba com barro na chuva e poeira na seca.</p>
+        <a class="card__go" data-wa="Olá, Rafael! Quero orçamento para asfaltar uma rua de terra." href="https://wa.me/5514997217335" target="_blank" rel="noopener">Pedir orçamento <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+    </article>
+    <article class="card">
+      <div class="card__img m-cond"><span class="mk"></span></div>
+      <div class="card__txt">
+        <h3>Condomínios</h3>
+        <p>Ruas internas, entradas e áreas comuns com acabamento uniforme, do portão até a última casa.</p>
+        <a class="card__go" data-wa="Olá, Rafael! Quero orçamento de asfalto para condomínio." href="https://wa.me/5514997217335" target="_blank" rel="noopener">Pedir orçamento <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+    </article>
+    <article class="card">
+      <div class="card__img m-patio"><span class="mk"></span></div>
+      <div class="card__txt">
+        <h3>Pátios e estacionamentos</h3>
+        <p>Piso firme para carro, caminhão e empilhadeira, pronto para receber a demarcação das vagas.</p>
+        <a class="card__go" data-wa="Olá, Rafael! Quero orçamento de asfalto para pátio ou estacionamento." href="https://wa.me/5514997217335" target="_blank" rel="noopener">Pedir orçamento <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+    </article>
+    <article class="card">
+      <div class="card__img m-acesso"><span class="mk"></span></div>
+      <div class="card__txt">
+        <h3>Entradas e acessos de empresas</h3>
+        <p>A primeira impressão de quem chega. Acesso sem buraco para cliente, fornecedor e caminhão.</p>
+        <a class="card__go" data-wa="Olá, Rafael! Quero orçamento de asfalto para a entrada da empresa." href="https://wa.me/5514997217335" target="_blank" rel="noopener">Pedir orçamento <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+    </article>
+    <article class="card">
+      <div class="card__img m-lote"><span class="mk"></span></div>
+      <div class="card__txt">
+        <h3>Loteamentos</h3>
+        <p>Ruas novas asfaltadas para o loteamento ser entregue pronto, valorizado e sem barro.</p>
+        <a class="card__go" data-wa="Olá, Rafael! Quero orçamento de asfalto para loteamento." href="https://wa.me/5514997217335" target="_blank" rel="noopener">Pedir orçamento <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+    </article>
+  </div>
+  <div class="wrap"><div class="prog"><i id="svc-bar"></i></div></div>
+</section>
 
-          <!-- camadas fixas -->
-          <rect x="0" y="420" width="1000" height="80" fill="url(#p-soil)"/>
-          <rect x="0" y="340" width="1000" height="80" fill="url(#p-base)"/>
-          <path class="cut__old" d="M0 280H560c8 0 12 4 14 10l8 30c2 6 6 10 14 10h70c8 0 12-4 14-10l8-30c2-6 6-10 14-10H1000v60H0z" fill="url(#p-old)"/>
-          <g class="cut__cracks"><path d="M150 282l8 20-6 16 8 20M300 282l-6 22 8 18-4 18M820 282l6 18-8 22 6 18M440 282l4 26-6 30"/></g>
+<!-- ============ ANTES E DEPOIS ============ -->
+<section class="sec sec--dark" id="antes-depois" aria-labelledby="ba-title">
+  <div class="wrap ba-grid">
+    <div class="ba-copy">
+      <p class="kicker">Recapeamento</p>
+      <h2 class="title" id="ba-title">Arraste e veja <span class="hl">a diferença</span></h2>
+      <p>Trinca em rede, buraco que volta depois do remendo, pedrinha solta e água parada. A capa nova cobre tudo de uma vez e devolve uma superfície lisa e sinalizada.</p>
+      <ul class="signs">
+        <li>Trincas em “couro de jacaré”</li>
+        <li>Buraco que reaparece na chuva</li>
+        <li>Pedrinhas soltas e piso áspero</li>
+        <li>Água empoçada e ondulação</li>
+      </ul>
+      <a class="btn btn--y" data-wa="Olá, Rafael! Minha rua está com buracos e trincas, quero um orçamento." href="https://wa.me/5514997217335" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Quero recapear</a>
+    </div>
 
-          <!-- 1: medição -->
-          <g class="st st-measure">
-            <path d="M40 210V250M960 210V250M40 230H960" class="dim"/>
-            <path d="M40 230l14-8v16zM960 230l-14-8v16z" class="dim-head"/>
-            <rect x="370" y="210" width="260" height="40" rx="2" class="dim-box"/>
-            <text x="500" y="237" text-anchor="middle" class="dim-text">ÁREA MEDIDA</text>
-          </g>
-
-          <!-- 2: limpeza e reparo -->
-          <g class="st st-debris">
-            <circle cx="120" cy="274" r="5"/><circle cx="210" cy="276" r="3.5"/><circle cx="260" cy="273" r="6"/><circle cx="380" cy="275" r="4"/><circle cx="470" cy="272" r="5.5"/><circle cx="720" cy="274" r="4.5"/><circle cx="790" cy="276" r="3"/><circle cx="880" cy="273" r="5"/><path d="M330 276h30M640 276h40M900 276h26"/>
-          </g>
-          <path class="st st-fill" d="M560 280c8 0 12 4 14 10l8 30c2 6 6 10 14 10h70c8 0 12-4 14-10l8-30c2-6 6-10 14-10z" fill="url(#p-new)"/>
-
-          <!-- 3: pintura de ligação -->
-          <g clip-path="url(#c-tack)"><rect x="0" y="274" width="1000" height="7" class="tack"/></g>
-
-          <!-- 4: capa nova -->
-          <g clip-path="url(#c-mat)">
-            <path id="mat-path" d="M0 274V222H1000V274Z" fill="url(#p-new)"/>
-          </g>
-          <g id="steam" class="steam"><path d="M0 206c-10-20 10-30 0-50s10-30 0-50" /><path d="M18 210c-10-18 10-28 0-46s10-26 0-44"/><path d="M-18 212c-8-16 8-24 0-40"/></g>
-
-          <!-- 5: compactação + faixa -->
-          <g id="roller" class="roller"><path d="M0 0L-30 -78H-140" class="roller__arm"/><g id="drum"><circle cx="0" cy="0" r="58"/><path d="M-44 0H44M0 -44V44" class="roller__spoke"/></g><circle cx="0" cy="0" r="10" class="roller__hub"/></g>
-          <g class="st st-lane"><rect x="60" y="222" width="120" height="5"/><rect x="300" y="222" width="120" height="5"/><rect x="540" y="222" width="120" height="5"/><rect x="780" y="222" width="120" height="5"/></g>
-
-          <!-- rótulos -->
-          <g class="tags">
-            <text x="944" y="252" class="tag st st-tag-new">CAPA NOVA</text>
-            <text x="944" y="266" class="tag st st-tag-tack">PINTURA DE LIGAÇÃO</text>
-            <text x="944" y="316" class="tag">PAVIMENTO EXISTENTE</text>
-            <text x="944" y="386" class="tag">BASE</text>
-            <text x="944" y="466" class="tag">SUBLEITO</text>
-          </g>
+    <div class="ba" id="ba" style="--p:50%">
+      <div class="ba__side ba__after">
+        <svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <rect x="0" y="80" width="800" height="6" class="edge"/><rect x="0" y="514" width="800" height="6" class="edge"/>
+          <g class="lane"><rect x="-20" y="292" width="150" height="16"/><rect x="210" y="292" width="150" height="16"/><rect x="440" y="292" width="150" height="16"/><rect x="670" y="292" width="150" height="16"/></g>
         </svg>
+        <span class="ba__lbl ba__lbl--r">Depois</span>
       </div>
+      <div class="ba__side ba__before">
+        <svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs><radialGradient id="pit" cx="50%" cy="45%" r="55%"><stop offset="0" stop-color="#151413"/><stop offset=".7" stop-color="#2a2826"/><stop offset="1" stop-color="#2a2826" stop-opacity="0"/></radialGradient></defs>
+          <path class="patch" d="M520 120h150l6 96-160 6z"/><path class="patch" d="M80 400l130-6 8 100-142 6z"/>
+          <g class="worn"><rect x="-20" y="292" width="150" height="16"/><rect x="210" y="294" width="150" height="16"/><rect x="440" y="291" width="90" height="16"/><rect x="670" y="293" width="150" height="16"/></g>
+          <ellipse cx="560" cy="420" rx="92" ry="52" fill="url(#pit)"/><path class="rim" d="M480 410c18-32 116-40 156-6"/>
+          <ellipse cx="250" cy="200" rx="56" ry="34" fill="url(#pit)"/>
+          <g class="cracks"><path d="M0 250l60 8 40-18 70 22 60-10 50 30 90-6 40 22 80-4 60 18 70-10 60 14 50-6"/><path d="M360 40l26 60-10 40 36 50-18 50 30 70-6 60 26 40"/><path d="M620 300l40 30 60-6 30 40 50 10"/><path d="M90 470l40-12 30 22 40-14 36 18M130 458l6 40 34 10M160 480l-4 46M200 466l10 44 40 4" class="thin"/><path d="M700 60l-20 60 26 40-10 50 30 30" class="thin"/></g>
+        </svg>
+        <span class="ba__lbl">Antes</span>
+      </div>
+      <div class="ba__handle" aria-hidden="true"><span><svg><use href="#i-drag"/></svg></span></div>
+      <input class="ba__range" type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois do recapeamento">
     </div>
   </div>
 </section>
 
-<!-- 5 · ORÇAMENTO -->
-<section class="orcamento" id="orcamento" aria-labelledby="orc-title">
-  <div class="wrap orcamento__grid">
-    <div class="orcamento__intro">
-      <p class="label label--dark">Orçamento</p>
-      <h2 id="orc-title">Conte onde&nbsp;é. O&nbsp;Rafael responde.</h2>
-      <p>Preencha o que souber. A mensagem abre pronta no seu WhatsApp, é só enviar. Se preferir, ligue direto.</p>
+<!-- ============ OBRAS (carrossel de fotos) ============ -->
+<section class="sec sec--light" id="obras" aria-labelledby="obras-title">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <p class="kicker">Galeria</p>
+        <h2 class="title" id="obras-title">Obras da <span class="hl">S.R.R.</span></h2>
+      </div>
+      <div class="ctrl" aria-label="Navegar pelas fotos">
+        <button class="ctrl__b" data-prev="gal" aria-label="Foto anterior"><svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+        <button class="ctrl__b" data-next="gal" aria-label="Próxima foto"><svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      </div>
+    </div>
+  </div>
+  <!-- as fotos vêm da lista OBRAS em js/main.js; sem fotos, aparecem os espaços reservados -->
+  <div class="track track--gal" id="gal" tabindex="0" aria-label="Fotos de obras, role para o lado"></div>
+  <div class="wrap"><div class="prog"><i id="gal-bar"></i></div></div>
+</section>
+
+<!-- ============ COMO FAZEMOS ============ -->
+<section class="sec sec--white" id="como-fazemos" aria-labelledby="how-title">
+  <div class="wrap">
+    <div class="head head--center">
+      <p class="kicker">Passo a passo</p>
+      <h2 class="title" id="how-title">Como é feito o <span class="hl">recapeamento</span></h2>
+    </div>
+    <ol class="steps" id="steps">
+      <li><span class="step__ic"><svg aria-hidden="true"><use href="#i-ruler"/></svg></span><b>Avaliação</b><p>A área é vista e medida antes do preço. Orçamento em cima do que existe, não no chute.</p></li>
+      <li><span class="step__ic"><svg aria-hidden="true"><use href="#i-broom"/></svg></span><b>Limpeza e reparo</b><p>Sai o material solto. Buracos e afundamentos são corrigidos antes da capa nova.</p></li>
+      <li><span class="step__ic"><svg aria-hidden="true"><use href="#i-drop"/></svg></span><b>Pintura de ligação</b><p>Emulsão asfáltica que cola a camada nova na antiga e evita que ela descole.</p></li>
+      <li><span class="step__ic"><svg aria-hidden="true"><use href="#i-truck"/></svg></span><b>Massa asfáltica</b><p>A massa quente é espalhada por igual, acompanhando o caimento da água.</p></li>
+      <li><span class="step__ic"><svg aria-hidden="true"><use href="#i-roller"/></svg></span><b>Compactação</b><p>O rolo fecha a camada ainda quente. Depois de esfriar, é liberar o tráfego.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ ORÇAMENTO ============ -->
+<section class="orc" id="orcamento" aria-labelledby="orc-title">
+  <div class="wrap orc__grid">
+    <div class="orc__intro">
+      <p class="kicker kicker--dark">Orçamento sem compromisso</p>
+      <h2 class="title" id="orc-title">Conte onde é. O&nbsp;Rafael responde.</h2>
+      <p>Preencha o que souber. A mensagem abre pronta no seu WhatsApp, é só enviar.</p>
       <ul class="phones">
-        <li><a href="tel:+5514997217335">(14) 99721-7335</a> <span>Rafael · WhatsApp e ligação</span></li>
-        <li><a href="tel:+5514988101699">(14) 98810-1699</a> <span>WhatsApp e ligação</span></li>
+        <li><a href="tel:+5514997217335">(14) 99721-7335</a><span>Rafael · WhatsApp e ligação</span></li>
+        <li><a href="tel:+5514988101699">(14) 98810-1699</a><span>WhatsApp e ligação</span></li>
       </ul>
     </div>
-
     <form class="form" id="form" novalidate>
-      <div class="field">
-        <label for="f-nome">Seu nome</label>
-        <input id="f-nome" name="nome" type="text" autocomplete="name" required>
-      </div>
-      <div class="field">
-        <label for="f-cidade">Cidade e bairro da obra</label>
-        <input id="f-cidade" name="cidade" type="text" autocomplete="address-level2" required>
-      </div>
-      <fieldset class="field field--chips">
+      <div class="field"><label for="f-nome">Seu nome</label><input id="f-nome" name="nome" type="text" autocomplete="name" required></div>
+      <div class="field"><label for="f-cidade">Cidade e bairro da obra</label><input id="f-cidade" name="cidade" type="text" autocomplete="address-level2" required></div>
+      <fieldset class="field chips">
         <legend>O que precisa</legend>
         <label><input type="radio" name="servico" value="Recapeamento (já tem asfalto)" checked><span>Recapear asfalto</span></label>
         <label><input type="radio" name="servico" value="Pavimentação (ainda não tem asfalto)"><span>Asfaltar do zero</span></label>
         <label><input type="radio" name="servico" value="Ainda não sei"><span>Não sei</span></label>
       </fieldset>
-      <div class="field field--half">
-        <label for="f-local">Tipo de local</label>
-        <select id="f-local" name="local">
-          <option>Rua ou avenida</option>
-          <option>Condomínio</option>
-          <option>Pátio ou estacionamento</option>
-          <option>Entrada ou acesso de empresa</option>
-          <option>Loteamento</option>
-          <option>Outro</option>
-        </select>
-      </div>
-      <div class="field field--half">
-        <label for="f-area">Tamanho aproximado <small>(opcional)</small></label>
-        <input id="f-area" name="area" type="text" inputmode="text" placeholder="ex.: 300 m² ou 50 × 6 m">
-      </div>
-      <div class="field">
-        <label for="f-msg">Algo mais? <small>(opcional)</small></label>
-        <textarea id="f-msg" name="msg" rows="2"></textarea>
-      </div>
-      <p class="form__error" id="form-error" role="alert" hidden>Preencha seu nome e a cidade da obra.</p>
-      <button class="btn btn--dark" type="submit"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-wa"/></svg>Enviar pelo WhatsApp</button>
+      <div class="field half"><label for="f-local">Tipo de local</label>
+        <select id="f-local" name="local"><option>Rua ou avenida</option><option>Condomínio</option><option>Pátio ou estacionamento</option><option>Entrada ou acesso de empresa</option><option>Loteamento</option><option>Outro</option></select></div>
+      <div class="field half"><label for="f-area">Tamanho aproximado <small>(opcional)</small></label><input id="f-area" name="area" type="text" placeholder="ex.: 300 m² ou 50 × 6 m"></div>
+      <p class="form__err" id="form-err" role="alert" hidden>Preencha seu nome e a cidade da obra.</p>
+      <button class="btn btn--dark" type="submit"><svg aria-hidden="true"><use href="#i-wa"/></svg>Enviar pelo WhatsApp</button>
     </form>
-  </div>
-</section>
-
-<!-- 6 · CONTATO -->
-<section class="contato" id="contato" aria-labelledby="contato-title">
-  <div class="wrap contato__grid">
-    <figure class="badge">
-      <img src="assets/img/logo-srr-640.webp" srcset="assets/img/logo-srr-640.webp 640w, assets/img/logo-srr-1000.webp 1000w" sizes="(min-width: 900px) 420px, 80vw" width="640" height="640" loading="lazy" decoding="async" alt="Logo da S.R.R. Prestação de Serviços: caminhão basculante, rolo compactador e a frase Serviços de pavimentação asfáltica.">
-    </figure>
-    <div class="contato__info">
-      <p class="label">Contato</p>
-      <h2 id="contato-title">Fale com o Rafael.</h2>
-      <dl class="facts">
-        <div><dt>WhatsApp e ligação</dt><dd><a href="https://wa.me/5514997217335" data-wa target="_blank" rel="noopener">(14) 99721-7335</a><br><a href="https://wa.me/5514988101699" target="_blank" rel="noopener">(14) 98810-1699</a></dd></div>
-        <div><dt>Atendimento</dt><dd>Horário comercial, de segunda a sexta</dd></div>
-        <div><dt>Região</dt><dd>Interior de São Paulo · DDD 14</dd></div>
-      </dl>
-      <p class="motto"><span>Qualidade</span><span>Confiança</span><span>Compromisso</span></p>
-    </div>
   </div>
 </section>
 </main>
 
-<footer class="foot">
-  <div class="wrap foot__row">
+<!-- ============ RODAPÉ ============ -->
+<footer class="foot" id="contato">
+  <div class="wrap foot__grid">
+    <div class="foot__brand">
+      <img src="assets/img/logo-srr-640.webp" width="640" height="640" loading="lazy" decoding="async" alt="Logo da S.R.R. Prestação de Serviços, serviços de pavimentação asfáltica">
+      <p class="motto">Qualidade <i></i> Confiança <i></i> Compromisso</p>
+    </div>
+    <div>
+      <p class="foot__h">Fale com a gente</p>
+      <ul class="foot__list">
+        <li><a data-wa="Olá, Rafael! Vim pelo site." href="https://wa.me/5514997217335" target="_blank" rel="noopener">WhatsApp (14) 99721-7335 · Rafael</a></li>
+        <li><a href="https://wa.me/5514988101699" target="_blank" rel="noopener">WhatsApp (14) 98810-1699</a></li>
+        <li><a href="tel:+5514997217335">Ligar: (14) 99721-7335</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="foot__h">Atendimento</p>
+      <dl class="hours">
+        <div><dt>Segunda a sexta</dt><dd>Horário comercial</dd></div>
+        <div><dt>Região</dt><dd>Interior de SP · DDD 14</dd></div>
+        <div><dt>Orçamento</dt><dd>Pelo WhatsApp</dd></div>
+      </dl>
+    </div>
+  </div>
+  <div class="wrap foot__end">
     <span class="mark mark--sm" aria-hidden="true">S<i></i>R<i></i>R<i></i></span>
-    <p>S.R.R. Prestação de Serviços · Recapeamento e pavimentação asfáltica</p>
-    <p>© <span id="year">2026</span></p>
+    <p>© <span id="year">2026</span> S.R.R. Prestação de Serviços · Recapeamento e pavimentação asfáltica</p>
   </div>
 </footer>
 
-<!-- barra fixa no celular -->
-<div class="dock" id="dock">
-  <a class="dock__wa" data-wa href="https://wa.me/5514997217335?text=Ol%C3%A1%2C%20Rafael!%20Vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento%20de%20asfalto." target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-wa"/></svg>Orçamento no WhatsApp</a>
-  <a class="dock__tel" href="tel:+5514997217335" aria-label="Ligar para o Rafael"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg></a>
+<!-- WhatsApp flutuante -->
+<div class="fab" id="fab">
+  <p class="fab__tip" id="fab-tip" hidden><button class="fab__x" id="fab-x" aria-label="Fechar aviso">×</button><b>Precisa de asfalto?</b> Fale com o Rafael pelo WhatsApp.</p>
+  <a class="fab__btn" data-wa="Olá, Rafael! Vim pelo site e quero um orçamento de asfalto." href="https://wa.me/5514997217335" target="_blank" rel="noopener" aria-label="Falar com o Rafael no WhatsApp">
+    <svg aria-hidden="true"><use href="#i-wa"/></svg><span class="fab__lbl">Fale com o Rafael</span></a>
 </div>
 
+<!-- ícones -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="i-wa" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3z"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3z"/></symbol>
+  <symbol id="i-tel" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M6 2.5h8l4 4V21a.5.5 0 0 1-.5.5h-11A.5.5 0 0 1 6 21zM14 2.5V7h4M9 12h6M9 16h6"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M2.5 9 12 4.5 21.5 9 12 13.5zM2.5 13.5 12 18l9.5-4.5M2.5 17.5 12 22l9.5-4.5"/></symbol>
+  <symbol id="i-road" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M8 2.5 3.5 21.5M16 2.5l4.5 19M12 3.5v3M12 10.5v3M12 17.5v3"/></symbol>
+  <symbol id="i-drag" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M9 6 3 12l6 6M15 6l6 6-6 6"/></symbol>
+  <symbol id="i-ruler" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M2.5 15.5 15.5 2.5l6 6-13 13zM7 11l2 2M10 8l2 2M13 5l2 2M4 14l2 2"/></symbol>
+  <symbol id="i-broom" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M20 3l-8 8M9.5 9.5l5 5L12 21H3l2.5-8.5zM7 21l1.5-4M10 21l1-3"/></symbol>
+  <symbol id="i-drop" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 2.5S5.5 10 5.5 14.5a6.5 6.5 0 0 0 13 0C18.5 10 12 2.5 12 2.5z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M9 15a3 3 0 0 0 3 3"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M1.5 6.5h12v10h-12zM13.5 10h4.5l4 4v2.5h-8.5z"/><circle cx="6" cy="18" r="2" fill="#fff" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="18" r="2" fill="#fff" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-roller" viewBox="0 0 24 24"><circle cx="7" cy="16.5" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M11 13.5V6.5h6l3.5 6V18h-8.5M15 6.5V3.5h-4"/><circle cx="18" cy="18.5" r="2" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-cam" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M3 7.5h4l1.5-2.5h7L17 7.5h4v12H3z"/><circle cx="12" cy="13" r="3.8" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
 </svg>
 
 <script src="js/main.js" defer></script>

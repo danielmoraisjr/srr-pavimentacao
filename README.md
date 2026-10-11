@@ -2,12 +2,17 @@
 
 Site estático (sem build). Rodar local: `cd srr && python3 -m http.server 8000`.
 
-## Conceito
-A página é uma rua sendo recapeada. No topo, a capa nova de asfalto avança sobre o
-pavimento gasto: uma parte entra sozinha ao abrir a página e o resto acompanha o scroll.
-Em "Como fazemos", um corte do pavimento é montado camada por camada (medição, limpeza,
-pintura de ligação, massa asfáltica e compactação). Cores da logo: preto de asfalto,
-amarelo de sinalização e aço.
+## Como está montado
+Base comercial, a mesma linha do site do Alemão Pneus: topo escuro com o caminhão da logo,
+atalhos (orçamento, recapeamento, pavimentação, ligar), carrossel de serviços, comparação
+antes/depois de arrastar, galeria de obras em carrossel, passo a passo, orçamento pelo
+WhatsApp e botão flutuante do WhatsApp.
+
+## Fotos das obras (carrossel)
+1. Coloque as fotos em `assets/obras/` (de preferência .webp ou .jpg, na horizontal).
+2. Liste em `js/main.js`, na constante `OBRAS`:
+   `{ src: "assets/obras/01.webp", legenda: "Recapeamento · Rua X, Bauru" }`
+Sem fotos, o carrossel mostra espaços reservados.
 
 ## Dados usados (vindos do cliente)
 - Nome, slogan, serviço e telefones: tirados da logo (`tools/logo-original.png`).
@@ -29,5 +34,5 @@ amarelo de sinalização e aço.
 
 ## Arquivos
 - `index.html`, `css/style.css`, `js/main.js` (JS puro, sem bibliotecas).
-- `fonts/`: Archivo (variável, com eixo de largura) e IBM Plex Mono, servidas localmente.
+- `fonts/`: Kanit (títulos) e Barlow (texto), servidas localmente.
 - `assets/img/asphalt-*.webp`: texturas que se repetem sem emenda (`python3 tools/textures.py`).
